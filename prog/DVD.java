@@ -4,6 +4,7 @@ import java.util.*;
 
 public class DVD extends Produto {
     private int duracao;
+    private float preco_desconto;
 
     public DVD() {
         Scanner leia = new Scanner(System.in);
@@ -17,5 +18,10 @@ public class DVD extends Produto {
         super.exibir();
         System.out.println("Duração: " + this.duracao);
 
+    }
+
+    public void calcularPreco() {
+        float preco = getPreco();
+        preco_desconto = preco *(25/100);
     }
 }

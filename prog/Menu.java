@@ -29,6 +29,31 @@ public class Menu {
             switch (op) {
                 case 1:
                     cadastrarProduto();
+                    Scanner leia = new Scanner (System.in);
+                    int x = 0;
+                    System.out.println("O que você deseja cadastrar? ");
+                    System.out.println("1 - Livro ");
+                    System.out.println("2 - CD ");
+                    System.out.println("3 - DVD ");
+                    x = leia.nextInt();
+
+                    if (x == 1){
+                        Livro livro = new Livro();
+                        livros.add(livro);
+                    }
+                    if (x == 2){
+                        CD cd = new CD();
+                        cds.add(cd);
+                    }
+                    if (x == 3){
+                        DVD dvd = new DVD();
+                        dvds.add(dvd);
+                    }
+                    System.out.println("==============================");
+                    System.out.println("Produto cadastrado com sucesso! ");
+                    System.out.println("==============================");    
+            
+
                     break;
                 case 2:
                     consultarProdutos();
@@ -53,6 +78,7 @@ public class Menu {
 
     }
 
+
     private void cadastrarProduto() {
         produtos.add(new Produto());
         System.out.println("==============================");
@@ -75,18 +101,5 @@ public class Menu {
     private void excluirProduto() {
     }
 
-    /*private void excluirProduto () {
-        leia = new Scanner(System.in);
-        System.out.println("Informe o código da turma que deve ser removida: ");
-        int codigo = leia.nextInt();
-        System.out.println();
-        for (int i = 0; i < turmas.size(); i++) {
-            if (turmas.get(i).getCodigo() == codigo) {
-                turmas.remove(i);
-            }
-        }
-        System.out.println("Turma removida com sucesso! ");
-        System.out.println("============================");
-    }*/
 
 }
