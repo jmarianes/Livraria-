@@ -4,6 +4,7 @@ import java.util.*;
 
 public class CD extends Produto {
     private int numero_faixa;
+    private float preco_desconto;
 
     public CD() {
         Scanner leia = new Scanner(System.in);
@@ -19,7 +20,8 @@ public class CD extends Produto {
     }
 
     public void calcularPreco() {
-
+            float preco = getPreco();
+            preco_desconto = preco *(15/100);
     }
 
 }

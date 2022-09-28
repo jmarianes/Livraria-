@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Livro extends Produto {
     private String autor;
+    private float preco_desconto;
 
     public Livro() {
         Scanner leia = new Scanner(System.in);
@@ -19,7 +20,8 @@ public class Livro extends Produto {
     }
 
     public void calcularPreco() {
-
+        float preco = getPreco();
+        preco_desconto = preco *(30/100);
     }
 
 }
