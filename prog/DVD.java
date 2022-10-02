@@ -3,7 +3,7 @@ package prog;
 import java.util.*;
 
 public class DVD extends Produto {
-    private int duracao;
+    private int duracao;    
     private float preco_desconto;
 
     public DVD() {
@@ -23,5 +23,13 @@ public class DVD extends Produto {
     public void calcularPreco() {
         float preco = getPreco();
         preco_desconto = preco *(25/100);
+    }
+    
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
     }
 }

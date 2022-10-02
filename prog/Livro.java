@@ -24,4 +24,11 @@ public class Livro extends Produto {
         preco_desconto = preco *(30/100);
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 }
